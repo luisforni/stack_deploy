@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  mi_api:
+    build:
+      context: ./app/mi_api
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8000"
+    restart: always
+
+  admin_panel:
+    build:
+      context: ./app/admin_panel
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8000"
+    restart: always
+
+  otra_app:
+    build:
+      context: ./app/otra_app
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8000"
+    restart: always
